@@ -1,2 +1,2 @@
 # jenkins-setup-tutorial
-Intalling jenkins https://www.jenkins.io/doc/book/installing/docker/
+Installing jenkins https://www.jenkins.io/doc/book/installing/docker/
