@@ -26,6 +26,22 @@ I am following this docs for installing jenkins on docker :)
     docker build -t mylocaljenkins-blueocean:0.0.0.1 .
    ```
 6. Now time for running the image
-   ```bash
+
+```bash
   docker run --name jenkins-blueocean --restart=on-failure --detach --network jenkins --env DOCKER_HOST=tcp://docker:2376 --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 --publish 8080:8080 --publish 50000:50000 --volume jenkins-data:/var/jenkins_home --volume jenkins-docker-certs:/certs/client:ro mylocaljenkins-blueocean:0.0.0.1
-   ```
+```
+
+
+## Using the bash Script
+
+Change the mod to
+
+``` bash
+chmod +x init_jenkins.sh
+```
+
+and run
+```bash
+./init_jenkins.sh
+```
+Make sure your port 8080 is available :
